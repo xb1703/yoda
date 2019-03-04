@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>Postures de yoga</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let posture of postures">
+        <img mat-list-avatar src="{{posture.picture}}" alt="{{posture.name}}">
+        <h3 mat-line>
+          <a mat-button [routerLink]="['/postures', posture.id]"><strong>{{posture.name}}</strong>
+        </a></h3>
+        <p mat-line>{{posture.description}}</p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

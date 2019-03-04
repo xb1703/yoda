@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title><h2>{{posture.name}}</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{posture.description}}
+    </mat-card-content>
+    <mat-card-content>
+      <div class="giphy">
+        <img src="{{posture.picture}}" alt="{{posture.name}}">
+      </div>
+    </mat-card-content>
+    <mat-card-footer>
+      <a mat-button routerLink="/">Retour</a>
+    </mat-card-footer>
+</mat-card>
