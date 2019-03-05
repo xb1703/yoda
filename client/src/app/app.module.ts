@@ -8,13 +8,16 @@ import { PostureListComponent } from './posture-list/posture-list.component';
 import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostureViewComponent } from './posture-view/posture-view.component';
+import { BookingEditComponent } from './booking-edit/booking-edit.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PostureListComponent,
-    PostureViewComponent
+    PostureViewComponent,
+    BookingEditComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { PostureViewComponent } from './posture-view/posture-view.component';
     MatCardModule,
     MatInputModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
