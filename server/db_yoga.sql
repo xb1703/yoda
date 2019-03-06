@@ -41,7 +41,7 @@ CREATE TABLE `booking` (
 --
 
 INSERT INTO `booking` (`id`, `firstname`, `lastname`, `comment`, `classday`) VALUES
-(1, 'Xavier', 'Bernasconi', 'J\'aimerais être présent ce jour svp !', '1'),
+(1, 'Brad', 'Cooper', 'J\'aimerais être présent ce jour svp !', '1'),
 (2, 'jean', 'Poney en bois cracheur de feu', 'J\'espère que cours n\'est pas full !', '3'),
 (3, 'Dupont', 'Thierry', 'Pourriez-vous m\'inscrire à ce cours svp ?', '2'),
 (5, 'Jipé', 'Joba', 'J\'aimerais participer à ce cours', '3'),
