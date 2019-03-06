@@ -23,8 +23,8 @@ public class BookingController {
         return bookingRepository.findAll();
     }
 
-    @PostMapping("/booking")
-    public Booking createBooking(@Valid @RequestBody Booking booking) {
+    @RequestMapping(value = "/booking", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
+    public Booking createBooking(@RequestBody Booking booking) {
         return bookingRepository.save(booking);
     }
 
@@ -41,9 +41,10 @@ public class BookingController {
         Booking booking = bookingRepository.findById(bookingId)
                 .orElseThrow(() -> new ResourceNotFoundException("Booking", "id", bookingId));
 
-        booking.setFirstName(bookingDetails.getFirstName());
-        booking.setLastName(bookingDetails.getLastName());
-        booking.setComment(bookingDetails.getComment());
+        booking.setfirstname(bookingDetails.getfirstname());
+        booking.setlastname(bookingDetails.getlastname());
+        booking.setcomment(bookingDetails.getcomment());
+        booking.setclassday(bookingDetails.getclassday());
 
         Booking updatedBooking = bookingRepository.save(booking);
         return updatedBooking;

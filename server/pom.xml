@@ -8,7 +8,7 @@
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>easy-notes</name>
+	<name>yoga-demo</name>
 	<description>Yoga Demo Rest API</description>
 
 	<parent>

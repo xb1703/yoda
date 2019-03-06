@@ -33,4 +33,9 @@ export class BookingService {
   remove(href: string) {
     return this.http.delete(href);
   }
+
+  getclassdays() {
+    return this.http.get('./assets/ClassDays.json');
+  }
+
 }

@@ -15,6 +15,21 @@
                required name="lastname" #lastname>
       </mat-form-field>
     </mat-card-content>
+    <mat-card-content>
+    <mat-form-field>
+      <select matNativeControl required placeholder="Choix du cours" [(ngModel)]="booking.classday" name="classday">
+        <option value="" selected>Choisir un cours</option>
+        <option *ngFor="let classday of classdays" [value]="classday.ID">
+          {{classday.Name}}
+        </option>
+      </select>
+    </mat-form-field>
+    </mat-card-content>
+    <mat-card-content>
+      <mat-form-field>
+        <textarea matInput placeholder="Commentaire" [(ngModel)]="booking.comment" name="comment" #comment></textarea>
+      </mat-form-field>
+    </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" type="submit"
               [disabled]="!bookingForm.form.valid">Enregistrer</button>

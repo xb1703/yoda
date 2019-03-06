@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 04 mars 2019 à 12:01
+-- Généré le :  mer. 06 mars 2019 à 11:27
 -- Version du serveur :  10.1.33-MariaDB
 -- Version de PHP :  7.2.6
 
@@ -21,6 +21,31 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `db_yoga`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `booking`
+--
+
+CREATE TABLE `booking` (
+  `id` int(11) NOT NULL,
+  `firstname` varchar(125) NOT NULL,
+  `lastname` varchar(125) NOT NULL,
+  `comment` text,
+  `classday` varchar(85) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `booking`
+--
+
+INSERT INTO `booking` (`id`, `firstname`, `lastname`, `comment`, `classday`) VALUES
+(1, 'Xavier', 'Bernasconi', 'J\'aimerais être présent ce jour svp !', '1'),
+(2, 'jean', 'Poney en bois cracheur de feu', 'J\'espère que cours n\'est pas full !', '3'),
+(3, 'Dupont', 'Thierry', 'Pourriez-vous m\'inscrire à ce cours svp ?', '2'),
+(5, 'Jipé', 'Joba', 'J\'aimerais participer à ce cours', '3'),
+(6, 'Martin', 'Fourcade', 'Voici un commentaire !', '3');
 
 -- --------------------------------------------------------
 
@@ -53,6 +78,12 @@ INSERT INTO `postures` (`id`, `name`, `description`, `picture`, `created_at`, `u
 --
 
 --
+-- Index pour la table `booking`
+--
+ALTER TABLE `booking`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `postures`
 --
 ALTER TABLE `postures`
@@ -61,6 +92,12 @@ ALTER TABLE `postures`
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `booking`
+--
+ALTER TABLE `booking`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `postures`

@@ -15,6 +15,8 @@ export class BookingEditComponent implements OnInit {
 
   sub: Subscription;
 
+  classdays = [];
+
   constructor(private route: ActivatedRoute,
               private router: Router,
               private bookingService: BookingService) {
@@ -35,6 +37,10 @@ export class BookingEditComponent implements OnInit {
         });
       }
     });
+
+    this.bookingService.getclassdays().subscribe(result => {
+      this.classdays = result as string [];
+    }, error => console.error(error));
   }
 
   ngOnDestroy() {
@@ -42,11 +48,12 @@ export class BookingEditComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/booking-list']);
+    this.router.navigate(['/']);
   }
 
   save(form: NgForm) {
     this.bookingService.save(form).subscribe(result => {
+      alert("Votre demande de réservation est envoyée!")
       this.gotoList();
     }, error => console.error(error));
   }
